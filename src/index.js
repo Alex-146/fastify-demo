@@ -21,4 +21,4 @@ fastify.get("/", (req, reply) => {
   })
 })
 
-fastify.listen(PORT, () => console.log(`Server started at ${PORT}...`))
+fastify.listen(PORT, process.env.HOST ?? '::', () => console.log(`Server started at ${PORT}...`))
